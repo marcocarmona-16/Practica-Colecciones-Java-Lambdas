@@ -1,5 +1,5 @@
 /**
- * @Autor (Marco Antonio Carmona Lucero)
+ * @Autor (Marco Carmona)
  * @Version (15 Marzo 2026)
  */
 
@@ -9,7 +9,7 @@ public class Main{
     public static void main (String[] args){
 
 //        // ------------------------Pruebas del multiplicador-----------------------------------------
-        System.out.println("+++++++++++++++++++ El multiplicador +++++++++++++++++++++");
+        System.out.println("================== El multiplicador =====================");
         ArrayList<Integer> numerosAleatorios = OperacionesNumericas.generarNumerosAleatorios();
         System.out.println("Lista original (Aleatorios): " + numerosAleatorios);
 
@@ -30,7 +30,7 @@ public class Main{
         System.out.println("Lista multiplicada por " + multiplo + ": " + numerosMultiplos );
 
         // ----------------------Pruebas del filtro selectivo-----------------------
-        System.out.println("+++++++++++++++++++ El filtro selectivo +++++++++++++++++++++");
+        System.out.println("================== El filtro selectivo ========================");
         ArrayList<String> cadenas = new ArrayList<>(Arrays.asList("Coco", "Manzana", "Naranja", "Pera"));
         System.out.println("Lista original: " + cadenas);
         System.out.println("Ingrese la inicial que desea borrar: ");
@@ -60,7 +60,7 @@ public class Main{
 
 
 //        //------------------------------------Conversor de Mayusculas-------------------------
-        System.out.println("+++++++++++++++++++ Conversor de mayusculas +++++++++++++++++++++");
+        System.out.println("====================== Conversor de mayusculas ===========================");
         cadenas = new ArrayList<>(Arrays.asList("pepe", "juan", "maria", "cecy", "roberto"));
 
         System.out.println("Lista original: " + cadenas);
@@ -81,7 +81,7 @@ public class Main{
 
 
 //        //------------------------------------------Cuadrados Unicos-------------------------------
-        System.out.println("+++++++++++++++++++ Cuadrados unicos +++++++++++++++++++++");
+        System.out.println("================== Cuadrados unicos ===================");
         //caso normal
         numeros.clear();
         numeros = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 2, 3, 6));
@@ -108,7 +108,7 @@ public class Main{
         System.out.println("Lista al cuadrado: " + numerosCuadrados);
 
 //        //--------------------------------Mapa de Longitudes----------------------
-        System.out.println("+++++++++++++++++++ Mapa de longitudes +++++++++++++++++++++");
+        System.out.println("==================== Mapa de longitudes ====================");
 
         cadenas = new ArrayList<>(Arrays.asList("Taco", "cacahuate", "Mazapan", "chimichanga", "Arepa"));
         HashMap<String, Integer> mapaCadenas = new HashMap<>(OperacionesTexto.mapaDeLongitudes(cadenas));
@@ -129,7 +129,7 @@ public class Main{
 
 
 //        //---------------------------------Modificador de inventario---------------------
-        System.out.println("+++++++++++++++++++ Modificador de inventario +++++++++++++++++++++");
+        System.out.println("==================== Modificador de inventario ===========================");
         HashMap<String, Double> inventario = new HashMap<>();
 
         inventario.put("Shampoo", 40.0);
@@ -156,7 +156,7 @@ public class Main{
 
 
         //---------------------------------Contador de frecuencias---------------------
-        System.out.println("+++++++++++++++++++ Contador de frecuencias +++++++++++++++++++++");
+        System.out.println("======================= Contador de frecuencias ============================");
         cadenas = new ArrayList<>(Arrays.asList("Pepe", "Pecas", "pica", "papas", "con", "un", "pico", "Pica", "paPas", "pepe", "pecas"));
         System.out.println("Lista original: " + cadenas);
         HashMap<String, Integer> palabrasRepetidas = OperacionesTexto.contadorDeFrecuencias(cadenas);
@@ -175,7 +175,7 @@ public class Main{
         System.out.println("Mapa de repeticiones: " + palabrasRepetidas);
 
         //-----------------------------------Clasificador de palabras---------------------------------
-        System.out.println("+++++++++++++++++++ Clasificador de palabras +++++++++++++++++++++");
+        System.out.println("==================== Clasificador de palabras =====================");
 
         palabrasRepetidas = new HashMap<>();
         palabrasRepetidas.put("Marino", 11);
@@ -205,7 +205,7 @@ public class Main{
 
 
         //-----------------------------------Deduplicacion de palabras---------------------------------
-        System.out.println("+++++++++++++++++++ Deduplicacion de palabras +++++++++++++++++++++");
+        System.out.println("================== Deduplicacion de palabras ==================");
         System.out.println("Escriba una frase: ");
         String frase = scn.nextLine();
         System.out.println("Ingrese la longitud maxima de las palabras: ");
@@ -228,7 +228,7 @@ public class Main{
 
 
         //-------------------El Tope de Frecuencias-------------------------
-        System.out.println("+++++++++++++++++++ El Tope de Frecuencias +++++++++++++++++++++");
+        System.out.println("================= El Tope de Frecuencias ======================");
         HashMap <String, Integer> listaPalabras = new HashMap<>();
         listaPalabras.put("carro", 3);
         listaPalabras.put("moto", 7);
