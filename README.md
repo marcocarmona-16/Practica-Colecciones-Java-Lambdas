@@ -49,23 +49,36 @@ Valores null
 
 ## Ejemplo de salida
 ===== EL MULTIPLICADOR =====
+
 Lista original (Aleatorios): [83, 84, 85, 77, 64]
+
 Ingrese el numero del multiplicador: 
+
 3
 Lista multiplicada por 3: [249, 252, 255, 231, 192]
 
+
 Lista original: [2, -3, 5, -6, 4]
+
 Lista multiplicada por 3: [6, -9, 15, -18, 12]
 
+
 ===== CONTADOR DE FRECUENCIAS =====
+
 Lista original: [Pepe, Pecas, pica, papas, con, un, pico, Pica, paPas, pepe, pecas]
+
 Mapa de repeticiones: {pico=1, con=1, pica=2, un=1, papas=2, pecas=2, pepe=2}
 
+
 Lista original: []
+
 Mapa de repeticiones: {}
 
+
 Lista original: null
+
 Mapa de repeticiones: null
+
 
 ## Autor 
 Marco Carmona
