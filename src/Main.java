@@ -201,7 +201,7 @@ public class Main{
         palabrasRepetidas = null;
         System.out.println("Mapa de palabras repetidas: " + palabrasRepetidas);
         listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
-        System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
+        System.out.println("Lista de palabras filtradas por frecuencia: " + listaFiltrada);
 
 
         //-----------------------------------Deduplicacion de palabras---------------------------------
