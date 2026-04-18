@@ -90,5 +90,27 @@ public class OperacionesTexto {
     }
 
 
+    /**
+     * Escribe un método estático que toma un ArrayList<String> de palabras (con repeticiones).
+     * Usa merge() o compute() con una lambda para construir un mapa de
+     * frecuencias que muestre cuántas veces aparece cada palabra.
+     */
+    public static HashMap <String, Integer> contadorDeFrecuencias (ArrayList <String> lista){
+        if (lista == null){
+            return null;
+        }
+
+        HashMap<String, Integer> repeticiones = new HashMap<>();
+        OperacionesTexto.convertirAMinusculas(lista);
+
+        for (String c : lista){
+            repeticiones.merge(c, 1, (valorViejo, nuevoValor) -> nuevoValor + valorViejo);
+        }
+
+        return repeticiones;
+
+    }
+
+
 
 }

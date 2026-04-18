@@ -8,7 +8,7 @@ import java.util.*;
 public class Main{
     public static void main (String[] args){
 
-        // ------------------------Pruebas del multiplicador-----------------------------------------
+//        // ------------------------Pruebas del multiplicador-----------------------------------------
         System.out.println("+++++++++++++++++++ El multiplicador +++++++++++++++++++++");
         ArrayList<Integer> numerosAleatorios = OperacionesNumericas.generarNumerosAleatorios();
         System.out.println("Lista original (Aleatorios): " + numerosAleatorios);
@@ -59,7 +59,7 @@ public class Main{
 
 
 
-        //------------------------------------Conversor de Mayusculas-------------------------
+//        //------------------------------------Conversor de Mayusculas-------------------------
         System.out.println("+++++++++++++++++++ Conversor de mayusculas +++++++++++++++++++++");
         cadenas = new ArrayList<>(Arrays.asList("pepe", "juan", "maria", "cecy", "roberto"));
 
@@ -80,7 +80,7 @@ public class Main{
         System.out.println("Lista en mayusculas: " + cadenasMayusculas);
 
 
-        //------------------------------------------Cuadrados Unicos-------------------------------
+//        //------------------------------------------Cuadrados Unicos-------------------------------
         System.out.println("+++++++++++++++++++ Cuadrados unicos +++++++++++++++++++++");
         //caso normal
         numeros.clear();
@@ -107,7 +107,7 @@ public class Main{
         numerosCuadrados = OperacionesNumericas.cuadradosUnicos(numeros);
         System.out.println("Lista al cuadrado: " + numerosCuadrados);
 
-        //--------------------------------Mapa de Longitudes----------------------
+//        //--------------------------------Mapa de Longitudes----------------------
         System.out.println("+++++++++++++++++++ Mapa de longitudes +++++++++++++++++++++");
 
         cadenas = new ArrayList<>(Arrays.asList("Taco", "cacahuate", "Mazapan", "chimichanga", "Arepa"));
@@ -128,7 +128,7 @@ public class Main{
         System.out.println("Lista clave-valor: " + mapaCadenas);
 
 
-        //---------------------------------Modificador de inventario---------------------
+//        //---------------------------------Modificador de inventario---------------------
         System.out.println("+++++++++++++++++++ Modificador de inventario +++++++++++++++++++++");
         HashMap<String, Double> inventario = new HashMap<>();
 
@@ -157,6 +157,24 @@ public class Main{
 
         //---------------------------------Contador de frecuencias---------------------
         System.out.println("+++++++++++++++++++ Contador de frecuencias +++++++++++++++++++++");
+        cadenas = new ArrayList<>(Arrays.asList("Pepe", "Pecas", "pica", "papas", "con", "un", "pico", "Pica", "paPas", "pepe", "pecas"));
+        System.out.println("Lista original: " + cadenas);
+        HashMap<String, Integer> palabrasRepetidas = OperacionesTexto.contadorDeFrecuencias(cadenas);
+        System.out.println("Mapa de repeticiones: " + palabrasRepetidas);
+
+        //Caso vacio
+        cadenas.clear();
+        System.out.println("Lista original: " + cadenas);
+        palabrasRepetidas = OperacionesTexto.contadorDeFrecuencias(cadenas);
+        System.out.println("Mapa de repeticiones: " + palabrasRepetidas);
+
+        //caso null
+        cadenas = null;
+        System.out.println("Lista original: " + cadenas);
+        palabrasRepetidas = OperacionesTexto.contadorDeFrecuencias(cadenas);
+        System.out.println("Mapa de repeticiones: " + palabrasRepetidas);
+
+
 
 
 
