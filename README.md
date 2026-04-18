@@ -9,15 +9,25 @@ Se trabajan operaciones como filtrado, transformación, conteo de frecuencias y 
 
 ### Métodos Implementados
 elMultiplicador → Multiplica cada elemento de una lista por un valor dado.
+
 cuadradosUnicos → Calcula los cuadrados de una lista y elimina duplicados.
+
 filtroSelectivo → Filtra cadenas por longitud e inicial.
+
 convertidorDeMayusculas → Convierte cadenas a mayúsculas.
+
 convertirAMinusculas → Convierte cadenas a minúsculas.
+
 mapaDeLongitudes → Relaciona cada palabra con su longitud usando HashMap.
+
 modificadorDeInventario → Aplica un descuento del 10% a los precios.
+
 contadorDeFrecuencias → Cuenta repeticiones de palabras.
+
 clasificadorDePalabras → Filtra palabras según su frecuencia.
+
 deduplicacionDePalabras → Elimina duplicados y filtra por longitud.
+
 topeDeFrecuencias → Limita frecuencias a un valor máximo dado.
 
 ## Ejecución
