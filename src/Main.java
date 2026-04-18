@@ -15,6 +15,8 @@ public class Main{
         Scanner scn = new Scanner(System.in);
         System.out.println("Ingrese el numero del multiplicador: ");
         int multiplo = scn.nextInt();
+        //Limpiar buffer
+        scn.nextLine();
 
         ArrayList <Integer> numerosMultiplos = OperacionesNumericas.elMultiplicador(numerosAleatorios, multiplo);
         System.out.println("Lista multiplicada por " + multiplo + ": " + numerosMultiplos );
@@ -25,6 +27,33 @@ public class Main{
         numerosMultiplos.clear();
         numerosMultiplos = OperacionesNumericas.elMultiplicador(numeros, multiplo);
         System.out.println("Lista multiplicada por " + multiplo + ": " + numerosMultiplos );
+
+        // ----------------------Pruebas del filtro selectivo-----------------------
+        ArrayList<String> cadenas = new ArrayList<>(Arrays.asList("Coco", "Manzana", "Naranja", "Pera"));
+        System.out.println("Lista original: " + cadenas);
+        System.out.println("Ingrese la inicial que desea borrar: ");
+        String input = scn.nextLine();
+        input = input.toLowerCase();
+        System.out.println("Ingrese la longitud minima de la palabra: ");
+        int longitudMin = scn.nextInt();
+        //Limpiar el buffer
+        scn.nextLine();
+
+        ArrayList<String> cadenasModificada = OperacionesTexto.elFiltroSelectivo(cadenas, longitudMin, input);
+        System.out.println("Lista filtrada: " + cadenasModificada);
+
+        //Caso lista vacia
+        cadenas.clear();
+        System.out.println("La lista original: " + cadenas);
+        cadenasModificada = OperacionesTexto.elFiltroSelectivo(cadenas, longitudMin, input);
+        System.out.println("Lista filtrada: " + cadenasModificada);
+
+        //Caso lista null
+        cadenas.clear();
+        cadenas = null;
+        System.out.println("La lista original: " + cadenas);
+        cadenasModificada = OperacionesTexto.elFiltroSelectivo(cadenas, longitudMin, input);
+        System.out.println("Lista filtrada: " + cadenasModificada);
 
 
 
