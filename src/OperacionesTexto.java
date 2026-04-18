@@ -132,4 +132,32 @@ public class OperacionesTexto {
     }
 
 
+    /**
+     * Escribe un método estático que toma una frase larga, dividela en un array de palabras
+     * y usa un stream con lambdas para filtrar las palabras de menos de N letras,
+     * convertirlas a minúsculas y guardarlas en un HashSet para asegurar que no haya repetidas.
+     */
+    public static HashSet <String> deduplicacionDePalabras (String frase, int longitud){
+        if (frase == null){
+            return null;
+        }
+
+        frase = frase.toLowerCase();
+
+        //Dividimos la frase en un arrayList
+        ArrayList<String> fraseDividida = Arrays.stream(frase.split("[,\\s]+")).collect(Collectors.toCollection(ArrayList::new));
+
+
+        //Convertimos el arrayList en un HashSet
+        HashSet<String> fraseDivididaSinDuplicados = new HashSet<>(fraseDividida.stream()
+                .filter(s -> s.length() < longitud)
+                .collect(Collectors.toSet()));
+
+        return fraseDivididaSinDuplicados;
+
+    }
+
+
+
+
 }

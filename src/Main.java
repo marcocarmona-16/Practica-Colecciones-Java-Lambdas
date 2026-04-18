@@ -186,6 +186,7 @@ public class Main{
 
         System.out.println("Ingrese un numero para filtrar las palabras de menor longitud: ");
         int filtro = scn.nextInt();
+        scn.nextLine();
 
         ArrayList<String> listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
         System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
@@ -201,6 +202,29 @@ public class Main{
         System.out.println("Mapa de palabras repetidas: " + palabrasRepetidas);
         listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
         System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
+
+
+        //-----------------------------------Deduplicacion de palabras---------------------------------
+        System.out.println("+++++++++++++++++++ Deduplicacion de palabras +++++++++++++++++++++");
+        System.out.println("Escriba una frase: ");
+        String frase = scn.nextLine();
+        System.out.println("Ingrese la longitud maxima de las palabras: ");
+        int longitudMax = scn.nextInt();
+        scn.nextLine();
+        HashSet <String> palabrasSinRepetir = OperacionesTexto.deduplicacionDePalabras(frase, longitudMax);
+        System.out.println("Palabras sin repetir y filtradas: " + palabrasSinRepetir);
+
+        //caso vacio
+        frase= "";
+        System.out.println("frase original: " + frase);
+        palabrasSinRepetir = OperacionesTexto.deduplicacionDePalabras(frase, longitudMax);
+        System.out.println("Palabras sin repetir y filtradas: " + palabrasSinRepetir);
+
+        //caso null
+        frase= null;
+        System.out.println("frase original: " + frase);
+        palabrasSinRepetir = OperacionesTexto.deduplicacionDePalabras(frase, longitudMax);
+        System.out.println("Palabras sin repetir y filtradas: " + palabrasSinRepetir);
 
 
 
