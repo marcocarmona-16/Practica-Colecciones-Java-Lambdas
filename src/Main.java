@@ -227,8 +227,33 @@ public class Main{
         System.out.println("Palabras sin repetir y filtradas: " + palabrasSinRepetir);
 
 
+        //-------------------El Tope de Frecuencias-------------------------
+        System.out.println("+++++++++++++++++++ El Tope de Frecuencias +++++++++++++++++++++");
+        HashMap <String, Integer> listaPalabras = new HashMap<>();
+        listaPalabras.put("carro", 3);
+        listaPalabras.put("moto", 7);
+        listaPalabras.put("barco", 10);
+        listaPalabras.put("bicicleta", 2);
+        listaPalabras.put("camion", 11);
+        listaPalabras.put("avion", 14);
+        System.out.println("Ingrese el tope de frecuencias: ");
+        int frecuenciasMax = scn.nextInt();
+        scn.nextLine();
+        System.out.println("Lista original: " + listaPalabras);
+        OperacionesTexto.topeDeFrecuencias(listaPalabras, frecuenciasMax);
+        System.out.println("Lista limitada: " + listaPalabras);
 
+        //caso vacio
+        listaPalabras.clear();
+        System.out.println("Lista original: " + listaPalabras);
+        OperacionesTexto.topeDeFrecuencias(listaPalabras, frecuenciasMax);
+        System.out.println("Lista limitada: " + listaPalabras);
 
+        //caso null
+        listaPalabras = null;
+        System.out.println("Lista original: " + listaPalabras);
+        OperacionesTexto.topeDeFrecuencias(listaPalabras, frecuenciasMax);
+        System.out.println("Lista limitada: " + listaPalabras);
 
     }
 

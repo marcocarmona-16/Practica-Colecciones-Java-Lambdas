@@ -157,7 +157,29 @@ public class OperacionesTexto {
 
     }
 
+    /**
+     * Escribe un método estático que dado un HashMap<String, Integer> de palabras y frecuencias,
+     * usa replaceAll() para limitar todas las frecuencias a un máximo de N.
+     * Si una frecuencia es mayor a N, debe fijarse exactamente en N mediante una lambda
+     *
+     * @param listaPalabras
+     * @param frecuenciasMax
+     */
 
+    public static void topeDeFrecuencias (HashMap<String, Integer> listaPalabras, int frecuenciasMax){
+
+        if(listaPalabras == null){
+            return;
+        }
+
+        listaPalabras.replaceAll((palabra, frecuencia) -> {
+            if (frecuencia > frecuenciasMax){
+                return frecuenciasMax;
+            }else{
+                return frecuencia;
+            }
+        });
+    }
 
 
 }
