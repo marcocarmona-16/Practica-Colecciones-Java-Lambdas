@@ -1,7 +1,8 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 
- class OperacionesNumericas {
+class OperacionesNumericas {
      /**
       * Este metodo se encarga de rellenar el arrayList de 5 numeros generados aleatoriamente
       * @return
@@ -29,5 +30,23 @@ import java.util.*;
          return numeros;
      }
 
+     /**
+      * Escribe un método estático que dado
+      * un ArrayList<Integer> que contiene duplicados,
+      * crea un HashSet que contenga únicamente los cuadrados de los números pares únicos de la lista original.
+      */
+     public static HashSet <Integer> cuadradosUnicos (ArrayList<Integer> numeros){
+
+         if (numeros == null){
+             return null;
+         }
+
+         HashSet<Integer> numerosAlCuadrado = new HashSet <>(numeros.stream()
+                 .distinct()
+                 .map(n -> n * n )
+                 .collect(Collectors.toSet()));
+
+         return numerosAlCuadrado;
+     }
 
 }

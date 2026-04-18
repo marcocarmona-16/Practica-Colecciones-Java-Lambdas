@@ -9,6 +9,7 @@ public class Main{
     public static void main (String[] args){
 
         // ------------------------Pruebas del multiplicador-----------------------------------------
+        System.out.println("+++++++++++++++++++ El multiplicador +++++++++++++++++++++");
         ArrayList<Integer> numerosAleatorios = OperacionesNumericas.generarNumerosAleatorios();
         System.out.println("Lista original (Aleatorios): " + numerosAleatorios);
 
@@ -29,6 +30,7 @@ public class Main{
         System.out.println("Lista multiplicada por " + multiplo + ": " + numerosMultiplos );
 
         // ----------------------Pruebas del filtro selectivo-----------------------
+        System.out.println("+++++++++++++++++++ El filtro selectivo +++++++++++++++++++++");
         ArrayList<String> cadenas = new ArrayList<>(Arrays.asList("Coco", "Manzana", "Naranja", "Pera"));
         System.out.println("Lista original: " + cadenas);
         System.out.println("Ingrese la inicial que desea borrar: ");
@@ -58,8 +60,7 @@ public class Main{
 
 
         //------------------------------------Conversor de Mayusculas-------------------------
-
-        cadenas.clear();
+        System.out.println("+++++++++++++++++++ Conversor de mayusculas +++++++++++++++++++++");
         cadenas = new ArrayList<>(Arrays.asList("pepe", "juan", "maria", "cecy", "roberto"));
 
         System.out.println("Lista original: " + cadenas);
@@ -68,6 +69,7 @@ public class Main{
 
         //Caso lista vacia
         cadenas.clear();
+        System.out.println("Lista original: " + cadenas);
         cadenasMayusculas = OperacionesTexto.convertidorDeMayusculas(cadenas);
         System.out.println("Lista en mayusculas: ");
 
@@ -78,7 +80,38 @@ public class Main{
         System.out.println("Lista en mayusculas: " + cadenasMayusculas);
 
 
+        //------------------------------------------Cuadrados Unicos-------------------------------
+        System.out.println("+++++++++++++++++++ Cuadrados unicos +++++++++++++++++++++");
+        //caso normal
+        numeros.clear();
+        numeros = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 2, 3, 6));
+        System.out.println("Lista original: " + numeros);
+        HashSet<Integer> numerosCuadrados = OperacionesNumericas.cuadradosUnicos(numeros);
+        System.out.println("Lista al cuadrado: " + numerosCuadrados);
 
+        //caso numeros negativos
+        numeros.clear();
+        numeros = new ArrayList<>(Arrays.asList(1, -2, -2, 3, -1, 6, -4));
+        System.out.println("Lista original: " + numeros);
+        numerosCuadrados = OperacionesNumericas.cuadradosUnicos(numeros);
+        System.out.println("Lista al cuadrado: " + numerosCuadrados);
+
+        numeros.clear();
+        System.out.println("Lista original: " + numeros);
+        numerosCuadrados = OperacionesNumericas.cuadradosUnicos(numeros);
+        System.out.println("Lista al cuadrado: " + numerosCuadrados);
+
+        //Caso null
+        numeros = null;
+        System.out.println("Lista original: " + numeros);
+        numerosCuadrados = OperacionesNumericas.cuadradosUnicos(numeros);
+        System.out.println("Lista al cuadrado: " + numerosCuadrados);
+
+        //--------------------------------Mapa de Longitudes----------------------
+        System.out.println("+++++++++++++++++++ Mapa de longitudes +++++++++++++++++++++");
+
+        cadenas = new ArrayList<>(Arrays.asList("Taco", "cacahuate", "Mazapan", "chimichanga", "Arepa"));
+        HashMap<String, Integer> mapaCadenas;
 
 
 
