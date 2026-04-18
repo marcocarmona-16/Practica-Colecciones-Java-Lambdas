@@ -174,6 +174,34 @@ public class Main{
         palabrasRepetidas = OperacionesTexto.contadorDeFrecuencias(cadenas);
         System.out.println("Mapa de repeticiones: " + palabrasRepetidas);
 
+        //-----------------------------------Clasificador de palabras---------------------------------
+        System.out.println("+++++++++++++++++++ Clasificador de palabras +++++++++++++++++++++");
+
+        palabrasRepetidas = new HashMap<>();
+        palabrasRepetidas.put("Marino", 11);
+        palabrasRepetidas.put("Capitan", 3);
+        palabrasRepetidas.put("Barco", 5);
+        palabrasRepetidas.put("marea", 7);
+        System.out.println("Mapa de palabras repetidas: " + palabrasRepetidas);
+
+        System.out.println("Ingrese un numero para filtrar las palabras de menor longitud: ");
+        int filtro = scn.nextInt();
+
+        ArrayList<String> listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
+        System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
+
+        //Caso vacio
+        palabrasRepetidas.clear();
+        System.out.println("Mapa de palabras repetidas: " + palabrasRepetidas);
+        listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
+        System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
+
+        //caso null
+        palabrasRepetidas = null;
+        System.out.println("Mapa de palabras repetidas: " + palabrasRepetidas);
+        listaFiltrada = OperacionesTexto.clasificadorDePalabras(palabrasRepetidas, filtro);
+        System.out.println("Lista de palabras filtradas por longitud: " + listaFiltrada);
+
 
 
 

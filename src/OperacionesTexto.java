@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -111,6 +112,24 @@ public class OperacionesTexto {
 
     }
 
+
+    /**
+     * Escribe un método estático que dado un HashMap<String, Integer> de palabras y sus frecuencias,
+     * usa entrySet().stream() para filtrar a las palabras con frecuencia inferior a un valor dado y guarda solo
+     * las palabras que cumplen con el criterio en un ArrayList.
+     */
+    public static ArrayList<String> clasificadorDePalabras (HashMap<String, Integer> repeticiones, int numRepeticiones){
+        if (repeticiones == null){
+            return null;
+        }
+
+        ArrayList <String> nuevaLista = new ArrayList<>(repeticiones.entrySet().stream()
+                .filter(palabra -> palabra.getValue() < numRepeticiones )
+                .map(palabra -> palabra.getKey())
+                .collect(Collectors.toCollection(ArrayList::new)));
+
+        return nuevaLista;
+    }
 
 
 }
