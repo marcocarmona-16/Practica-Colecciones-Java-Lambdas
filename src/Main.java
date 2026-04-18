@@ -129,6 +129,35 @@ public class Main{
 
 
         //---------------------------------Modificador de inventario---------------------
+        System.out.println("+++++++++++++++++++ Modificador de inventario +++++++++++++++++++++");
+        HashMap<String, Double> inventario = new HashMap<>();
+
+        inventario.put("Shampoo", 40.0);
+        inventario.put("Gel para cabello", 80.0);
+        inventario.put("Perfume", 120.0);
+        inventario.put("Crema corporal", 55.0);
+
+        System.out.println("Inventario: " + inventario);
+        System.out.println("--------Inventario con descuento------");
+        OperacionesTexto.modificadorDeInventario(inventario);
+
+        //Caso vacio
+        inventario.clear();
+        System.out.println("Inventario: " + inventario);
+        System.out.println("--------Inventario con descuento------");
+        OperacionesTexto.modificadorDeInventario(inventario);
+
+        //Caso null
+        inventario = null;
+        System.out.println("Inventario: " + inventario);
+        System.out.println("--------Inventario con descuento------");
+        OperacionesTexto.modificadorDeInventario(inventario);
+
+
+
+        //---------------------------------Contador de frecuencias---------------------
+        System.out.println("+++++++++++++++++++ Contador de frecuencias +++++++++++++++++++++");
+
 
 
     }

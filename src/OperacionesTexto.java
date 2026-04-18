@@ -69,5 +69,26 @@ public class OperacionesTexto {
         return mapaLongitudes;
     }
 
+    /**
+     * Escribe un método estático que dado un HashMap<String, Double> que representa nombres
+     * de productos y sus precios. Usa el método forEach()
+     * para imprimir un catálogo donde cada precio tenga un descuento del 10% en la impresión.
+     */
+
+    public static void modificadorDeInventario (HashMap<String, Double> inventario){
+        if (inventario == null){
+            System.out.println("null");
+        }else if(inventario.isEmpty()){
+            System.out.println("La lista esta vacia");
+        }else{
+            inventario.forEach((producto, precio) ->{
+                double precioDescuento = precio * 0.9;
+
+                System.out.println(producto + " a $" + precioDescuento);
+            });
+        }
+    }
+
+
 
 }
