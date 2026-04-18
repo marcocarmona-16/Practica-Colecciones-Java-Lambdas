@@ -71,7 +71,7 @@ public class Main{
         cadenas.clear();
         System.out.println("Lista original: " + cadenas);
         cadenasMayusculas = OperacionesTexto.convertidorDeMayusculas(cadenas);
-        System.out.println("Lista en mayusculas: ");
+        System.out.println("Lista en mayusculas: " + cadenasMayusculas);
 
         //Caso lista null
         cadenas = null;
@@ -111,8 +111,24 @@ public class Main{
         System.out.println("+++++++++++++++++++ Mapa de longitudes +++++++++++++++++++++");
 
         cadenas = new ArrayList<>(Arrays.asList("Taco", "cacahuate", "Mazapan", "chimichanga", "Arepa"));
-        HashMap<String, Integer> mapaCadenas;
+        HashMap<String, Integer> mapaCadenas = new HashMap<>(OperacionesTexto.mapaDeLongitudes(cadenas));
+        System.out.println("Lista original: " + cadenas);
+        System.out.println("Lista clave-valor: " + mapaCadenas);
 
+        //caso vacio
+        cadenas.clear();
+        System.out.println("Lista original: " + cadenas);
+        mapaCadenas = OperacionesTexto.mapaDeLongitudes(cadenas);
+        System.out.println("Lista clave-valor: " + mapaCadenas);
+
+        //caso null
+        cadenas = null;
+        System.out.println("Lista original: " + cadenas);
+        mapaCadenas = OperacionesTexto.mapaDeLongitudes(cadenas);
+        System.out.println("Lista clave-valor: " + mapaCadenas);
+
+
+        //---------------------------------Modificador de inventario---------------------
 
 
     }
