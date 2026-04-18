@@ -52,9 +52,9 @@ Valores null
 
 Lista original (Aleatorios): [83, 84, 85, 77, 64]
 
-Ingrese el numero del multiplicador: 
+Ingrese el numero del multiplicador: 3
 
-3
+
 Lista multiplicada por 3: [249, 252, 255, 231, 192]
 
 
