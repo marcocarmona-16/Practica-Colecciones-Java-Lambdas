@@ -57,10 +57,25 @@ public class Main{
 
 
 
+        //------------------------------------Conversor de Mayusculas-------------------------
 
+        cadenas.clear();
+        cadenas = new ArrayList<>(Arrays.asList("pepe", "juan", "maria", "cecy", "roberto"));
 
+        System.out.println("Lista original: " + cadenas);
+        ArrayList<String> cadenasMayusculas = OperacionesTexto.convertidorDeMayusculas(cadenas);
+        System.out.println("Lista en mayusculas: " + cadenasMayusculas);
 
+        //Caso lista vacia
+        cadenas.clear();
+        cadenasMayusculas = OperacionesTexto.convertidorDeMayusculas(cadenas);
+        System.out.println("Lista en mayusculas: ");
 
+        //Caso lista null
+        cadenas = null;
+        System.out.println("Lista original: " + cadenas);
+        cadenasMayusculas = OperacionesTexto.convertidorDeMayusculas(cadenas);
+        System.out.println("Lista en mayusculas: " + cadenasMayusculas);
 
 
 

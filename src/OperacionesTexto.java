@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class OperacionesTexto {
 
@@ -25,6 +26,17 @@ public class OperacionesTexto {
         return cadenas;
     }
 
+    public static ArrayList <String> convertidorDeMayusculas (ArrayList<String> cadenas){
+        if(cadenas == null){
+            return null;
+        }
+
+        ArrayList <String> cadenasMayus = new ArrayList(cadenas.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.toList()));
+
+        return cadenasMayus;
+    }
 
 
 
